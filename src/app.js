@@ -14,7 +14,7 @@ const app = express()
 
 
 
-app.use(cors({ origin: 'https://assignment-ostad-08-gsqovgv1z-mashrurmahmuds-projects.vercel.app', credentials: true }))
+app.use(cors({ origin: ['https://create-job-application-m5dumo164-mashrurmahmuds-projects.vercel.app','https://assignment-ostad-08.vercel.app'], credentials: true }))
 app.use(express.json())
 
 app.use(cookieParser());
