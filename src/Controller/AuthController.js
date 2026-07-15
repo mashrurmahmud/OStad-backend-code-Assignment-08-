@@ -91,7 +91,7 @@ class AuthController{
             httpOnly: true,
             maxAge: 60 * 60 * 1000,
             secure:true,
-            samsite:"lax"
+            samesite:"none"
         })
         res.status(200).json({message:"User logged in successfully", success: true,
             user: {
