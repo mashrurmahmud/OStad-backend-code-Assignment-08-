@@ -27,7 +27,9 @@ class AuthController{
         }
         res.cookie('token', token,{
             httpOnly: true,
-            maxAge: 60 * 60 * 1000
+            maxAge: 60 * 60 * 1000,
+            sameSite: "none",
+            secure: true
         })
          res.status(201).json({message:"User created successfully", success: true,
             user: {
@@ -88,7 +90,7 @@ class AuthController{
         res.cookie('token', token, {
             httpOnly: true,
             maxAge: 60 * 60 * 1000,
-            secure:false,
+            secure:true,
             samsite:"lax"
         })
         res.status(200).json({message:"User logged in successfully", success: true,
