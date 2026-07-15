@@ -2,6 +2,7 @@ import jobService from "../service/jobService.js";
 
 class JobController{
     async getJobs(req, res) {
+        console.log("hello");
         const jobs = await jobService.getJobs();
 
          res.status(200).json(jobs);
